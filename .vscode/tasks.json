@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "gccBuild",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-pedantic-errors",
+                //"-Werror", 
+                "-Wall",
+                "-Wextra",
+                "-Wsign-conversion",
+				"-g",
+				"${file}",
+				"-o",
+				//"${fileDirname}/${fileBasenameNoExtension}"
+				"${workspaceFolder}/test.out"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		}
+	]
+}
