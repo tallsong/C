@@ -7,10 +7,10 @@
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-pedantic-errors",
-                //"-Werror", 
-                "-Wall",
-                "-Wextra",
-                "-Wsign-conversion",
+				"-Werror", 
+				"-Wall",
+				"-Wextra",
+				"-Wsign-conversion",
 				"-g",
 				"${file}",
 				"-o",
@@ -28,6 +28,65 @@
 				"isDefault": true
 			},
 			"detail": "compiler: /usr/bin/gcc"
+		},
+		{
+			"type": "cppbuild",
+			"label": "gccBuildPASS",
+			"command": "/usr/bin/gcc",
+			"args": [
+				// "-pedantic-errors",
+				// "-Werror", 
+				// "-Wall",
+				// "-Wextra",
+				//"-Wsign-conversion",
+				"-g",
+				"${file}",
+				"-o",
+				//"${fileDirname}/${fileBasenameNoExtension}"
+				"${workspaceFolder}/test.out"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		},
+		
+		{
+			"type": "shell",
+			"label": "single file", //"label": "C/C++: g++ build active file",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-std=c++2a",
+				"-pedantic-errors", //disable compiler extensions
+				// "-Werror",  //Make all warnings into errors.
+				"-Wall",
+				"-Weffc++",
+				"-Wextra",
+				"-Wsign-conversion",
+				//-Wall -Weffc++ -Wextra -Wsign-conversion Turn your warning levels up to the maximum
+				"-g", // for gdb to debug
+				"${file}",
+				"-o",
+				//"${fileDirname}/${fileBasenameNoExtension}",
+				"${workspaceFolder}/test.out",
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }
