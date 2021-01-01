@@ -12,7 +12,8 @@
 				"-Wextra",
 				"-Wsign-conversion",
 				"-g",
-				"${file}",
+				//"${file}",
+				"${fileDirname}/*.c",
 				"-o",
 				//"${fileDirname}/${fileBasenameNoExtension}"
 				"${workspaceFolder}/test.out"
@@ -41,6 +42,7 @@
 				//"-Wsign-conversion",
 				"-g",
 				"${file}",
+				
 				"-o",
 				//"${fileDirname}/${fileBasenameNoExtension}"
 				"${workspaceFolder}/test.out"
