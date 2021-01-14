@@ -11,8 +11,8 @@
             //"program": "enter program name, for example ${workspaceFolder}/a.out",
             "program": "${workspaceFolder}/test.out",
             "args": [
-                // "test",
-                // "parameter"
+                "test",
+                "parameter"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -26,57 +26,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "gccBuild",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "C DebugPass",
-            "type": "cppdbg",
-            "request": "launch",
-            //"program": "enter program name, for example ${workspaceFolder}/a.out",
-            "program": "${workspaceFolder}/test.out",
-            "args": [
-                // "test",
-                // "parameter"
-            ],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "gccBuildPASS",
-            "miDebuggerPath": "/usr/bin/gdb"
-        },
-        {
-            "name": "C++ debug",
-            "type": "cppdbg",
-            "request": "launch",
-            //"program": "${fileDirname}/${fileBasenameNoExtension}",
-            "program": "${workspaceFolder}/test.out",
-            "args": [
-                "123",
-                "fuck"
-            ],
-            "stopAtEntry": false, //If set to true, the debugger should stop at the entry-point of the target (ignored on attach). 
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "single file",
+            //"preLaunchTask": "gccBuild",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
